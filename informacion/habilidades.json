@@ -1,0 +1,43 @@
+[
+    {"ExperienciaEducativa":[
+        "Estudio independiente de la tecnologias de desarrollo y frameworks",
+        "Pariticipacion activa en cursos en linea, tutoriales y proyectos personales para aplicar y fortalecer mis habilidades",
+        "Desarrollo de proyectos practicos para adquirir experiencia en el mundo real"
+    ]},
+    {"habilidadesTecnicas":[
+        "Javascript", 
+        "Typescript", 
+        "Python"]},
+    {"FrameworksBibliotecas": [
+        [
+            "Flask",
+            "Django",
+            "Express",
+            "Passport",
+            "Prisma.io"
+        ],
+        [
+            "React", 
+            "Next"
+        ]
+        ]},
+    {"BasesDeDatos": [
+        "Relacionales:      PostgreSQL",
+        "No Relacionales:   MongoDB"]},
+    {"DisenoWeb": [
+        "HTML5",
+         "CSS3"]},
+    {"ComunicacionHabilidadesInterpersonales":[
+        "Fuertes Habilidades de comunicacion verbal y escrita",
+        "Capacidad para trabajar de forma colaborativa en equipos mutidisciplinarios",
+        "Proactivo en la busqueda de soluciones y resolucion de problemas",
+        "Enfoque en el aprendizaje continuo y mejora personal"
+    ]},
+    {"InteresyHobbies":[
+        "Desarrollo web y programacion de aplicaciones",
+        "Resolucion de problemas a travez de la codificacion",
+        "Explorar nuevas tecnologias de tendencias en el desarrollo de software",
+        "Comprometico con el aprendizaje autodirigido y el crecimiento personal"
+    ]},
+    {"MensajeVisitante":"Si está interesado en colaborar o tiene alguna pregunta, no dude en ponerse en contacto conmigo a través de mi correo electrónico (mr4303997@gmail.com) o mi perfil de LinkedIn (linkedin.com/in/miguel-ramos-99712a265/). ¡Gracias por su tiempo y consideración!"}
+]

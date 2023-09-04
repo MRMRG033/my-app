@@ -1,0 +1,22 @@
+.ExperienciaeducativaContainer{
+    height: 100vh;
+}
+.ExperienciaeducativaContainer h2{
+    padding: 50px;
+    font-size: 80px;
+    list-style: none;
+    background-color: black;
+}
+
+.ExperienciaeducativaContainer ul{
+    height: 90%;
+    list-style: none;
+    text-indent: 100px;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
+    font-size: 30px;
+    list-style: none;
+    background-color: black;
+}

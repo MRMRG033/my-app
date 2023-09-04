@@ -1,0 +1,16 @@
+.FrameworksContainter{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.FrameworksContainter h2{
+    font-size: 80px;
+}
+.FrameworksContainter ul{
+    text-indent: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
+    list-style: none;
+    background-color: black;
+}

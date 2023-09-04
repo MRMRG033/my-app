@@ -1,0 +1,21 @@
+.IntereshobbyContainer{
+    height: 100vh;
+    display:  grid;
+    grid-template-columns: 40% 60%;
+}
+.IntereshobbyContainer h2{
+    color: #173b5e;
+    font-size: 80px;
+    background-color: black;
+}
+.IntereshobbyContainer ul{
+    list-style: none;
+    text-indent: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
+    font-size: 30px;
+    list-style: none;
+    background-color: black;
+}

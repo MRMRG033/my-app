@@ -1,0 +1,19 @@
+.BasededatosContainer{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.BasededatosContainer h2{
+    font-size: 80px;
+}
+
+.BasededatosContainer ul{
+    list-style: none;
+    text-indent: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
+    list-style: none;
+    background-color: black;
+}

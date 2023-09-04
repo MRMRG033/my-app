@@ -1,0 +1,23 @@
+.ComunicacionContainer{
+    height: 100vh;
+}
+.ComunicacionContainer h2{
+    padding: 50px;
+    font-size: 80px;
+    color: #B9D6F2;
+    list-style: none;
+    background-color: black;
+}
+
+.ComunicacionContainer ul{
+    height: 90%;
+    list-style: none;
+    text-indent: 100px;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    color: #B9D6F2;
+    font-size: 30px;
+    list-style: none;
+    background-color: black;
+}
