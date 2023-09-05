@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Basededatos from '@/componentes/Basededatos'
 import Comunicacion from '@/componentes/Comunicacion'
@@ -13,24 +14,24 @@ export default function Home() {
   return (
     <main>
       <Navtop  />
-      <div id='Presentacion' className='section'>
+      <section id='Presentacion_container'>
       <Presentacion />
-      </div>
-      <div id='Experiencia' className='section'>
+      </section>
+      <section id='Experiencia_container'>
         <Experienciaeducativa />
-        </div>
-      <div id='Habilidades' className='section' style={{height:"100vh", display:'flex', flexDirection:"column", justifyContent:'space-around', background:'black' , scrollSnapType:'y mandatory'}}>
+        </section>
+      <section id='Habilidades_container' style={{height:"100vh", display:'flex', flexDirection:"column", justifyContent:'space-around', background:'black' , scrollSnapType:'y mandatory'}}>
       <Habilidades />
       <Frameworksbibliotecas />
       <Disenoweb />
-      </div>
+      </section>
       <Basededatos />
-      <div id='Comunicaciones' className='section'>
+      <section id='Comunicaciones_container'>
       <Comunicacion />
-      </div>
-      <div id='Intereses' className='section'>
+      </section>
+      <section id='Intereses_container'>
       <Intereshobby />
-      </div>
+      </section>
     </main>
   )
 }

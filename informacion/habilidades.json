@@ -22,8 +22,10 @@
         ]
         ]},
     {"BasesDeDatos": [
-        "Relacionales:      PostgreSQL",
-        "No Relacionales:   MongoDB"]},
+        "Relacionales:   SQLite  PostgreSQL",
+        
+        "No Relacionales:   MongoDB"
+        ]},
     {"DisenoWeb": [
         "HTML5",
          "CSS3"]},

@@ -3,79 +3,38 @@ import React, { useEffect, useState } from 'react';
 import styles from './estilos/Topnav.module.css';
 
 const Navtop = () => {
-  const [activeLink, setActiveLink] = useState<string | null>(null);
-  const [linkStyles, setLinkStyles] = useState<{ [key: string]: React.CSSProperties }>({
-    Presentacion: {},
-    Habilidades: {},
-    Intereses: {},
-    Experiencia: {},
-    Comunicaciones: {},
-  });
-
+  const [activeSection, setActiveSection ] = useState<string | null>(null)
   useEffect(() => {
+    
     const handleScroll = () => {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach((section, index) => {
-        const liElement = document.querySelectorAll('li')[index];
-        const sectionTop = section.getBoundingClientRect().top;
-        const linkText = liElement.textContent || '';
-
-        if (sectionTop >= 0 && sectionTop <= 350) {
-          setLinkStyles((prevState) => ({
-            ...prevState,
-            [linkText]: { fontSize: '30px', fontWeight: 'bold' },
-          }));
-        } else {
-          // Solo cambia el estilo si no es el enlace activo
-          if (linkText !== activeLink) {
-            setLinkStyles((prevState) => ({
-              ...prevState,
-              [linkText]: { fontSize: '24px', fontWeight: 'normal' },
-            }));
-          }
+      
+      const contenedores = document.querySelectorAll('section');
+      const scrollPosition = window.scrollY;
+      contenedores.forEach((element, index) =>{
+        const sectionTop= element.offsetTop;
+        const sectionHeight = element.offsetHeight;
+        if(index === 0){
+          console.log(sectionTop)
+          console.log(sectionHeight)
+          console.log(scrollPosition)
         }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [activeLink]);
-
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-  };
-
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          setActiveSection(element.id)
+        }
+    });
+}
+window.addEventListener('scroll', handleScroll);
+return ()=>{
+  window.removeEventListener('scroll', handleScroll);
+}
+  },[]);
   return (
     <nav className={styles.TopnavContainer}>
       <ul>
-        <li className={activeLink === 'Presentacion' ? styles.active : ''}>
-          <a href='#Presentacion' style={{ ...linkStyles['Presentacion'], transition: 'font-size 0.2s' }} onClick={() => handleLinkClick('Presentacion')}>
-            Inicio
-          </a>
-        </li>
-        <li className={activeLink === 'Experiencia' ? styles.active : ''}>
-          <a href='#Experiencia' style={{ ...linkStyles['Experiencia'], transition: 'font-size 0.2s' }} onClick={() => handleLinkClick('Experiencia')}>
-            Experiencia
-          </a>
-        </li>
-        <li className={activeLink === 'Habilidades' ? styles.active : ''}>
-          <a href='#Habilidades' style={{ ...linkStyles['Habilidades'], transition: 'font-size 0.2s' }} onClick={() => handleLinkClick('Habilidades')}>
-            Habilidades
-          </a>
-        </li>
-        <li className={activeLink === 'Comunicaciones' ? styles.active : ''}>
-          <a href='#Comunicaciones' style={{ ...linkStyles['Comunicaciones'], transition: 'font-size 0.2s' }} onClick={() => handleLinkClick('Comunicaciones')}>
-            Comunicaciones
-          </a>
-        </li>
-        <li className={activeLink === 'Intereses' ? styles.active : ''}>
-          <a href='#Intereses' style={{ ...linkStyles['Intereses'], transition: 'font-size 0.2s' }} onClick={() => handleLinkClick('Intereses')}>
-            Intereses
-          </a>
-        </li>
+          <li className={activeSection === '' ? styles.active : ''}><a href='#Presentacion_container'>Presentacion</a></li>
+          <li className={activeSection === 'Experiencia_container' ? styles.active: ''}><a href='#Experiencia_container' >Experiencia</a></li>
+          <li className={activeSection === 'Habilidades_container' ? styles.active: ''}><a href='#Habilidades_container'>Habilidades</a></li>
+          <li className={activeSection === 'Comunicaciones_container' ? styles.active: ''}><a href='#Intereses_container'>Intereses</a></li>
       </ul>
     </nav>
   );
