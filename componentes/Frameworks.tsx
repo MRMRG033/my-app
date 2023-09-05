@@ -6,7 +6,7 @@ const Frameworksbibliotecas = ()=>{
     return  <div className={styles.FrameworksContainter}>
         <h2>Frameworks | Bibliotecas</h2>
             <ul>
-                {frameworks?.map((item:string, index: number)=> <li key={index}>{item}</li>)}
+                {frameworks?.map((item:string | string[], index: number)=> <li key={index}>{item}</li>)}
             </ul>
     </div>
 }
