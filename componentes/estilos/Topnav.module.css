@@ -1,27 +1,36 @@
 /* Establece los estilos iniciales para los enlaces */
 .TopnavContainer a {
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .TopnavContainer {
-    background-color: #B9D6F2;
-    position: fixed;
-    width: 100%;
-  }
-  
-  .TopnavContainer ul {
-    width: 100%;
-    list-style: none;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-  }
+  font-size: 24px;
+  text-decoration: none;
+}
 
-.active a{
-  color: blue;
-  text-emphasis-color: white;
-  transition: 0.6s ease-in-out;
+.TopnavContainer {
+
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+}
+
+.TopnavContainer ul {
+  width: 100%;
+  list-style: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.activeNav .active a {
+
+  color: rgb(255, 255, 255);
+  transition: 0.4s ease-in-out;
   text-decoration: none;
 
+}
+
+.inactiveNav li a {
+  color: rgb(0, 0, 0);
+}
+
+.activeNav li a {
+  color: rgb(170, 170, 170);
 }

@@ -30,8 +30,8 @@ return ()=>{
   },[]);
   return (
     <nav className={styles.TopnavContainer}>
-      <ul>
-          <li className={activeSection === '' ? styles.active : ''}><a href='#Presentacion_container'>Presentacion</a></li>
+      <ul className={activeSection === '' ? styles.inactiveNav : styles.activeNav}>
+          <li className={activeSection === '' ? styles.active : ''}><a href='#Presentacion_container'>Inicio</a></li>
           <li className={activeSection === 'Experiencia_container' ? styles.active: ''}><a href='#Experiencia_container' >Experiencia</a></li>
           <li className={activeSection === 'Habilidades_container' ? styles.active: ''}><a href='#Habilidades_container'>Habilidades</a></li>
           <li className={activeSection === 'Comunicaciones_container' ? styles.active: ''}><a href='#Intereses_container'>Intereses</a></li>
