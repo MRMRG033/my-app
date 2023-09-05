@@ -20,7 +20,6 @@
 }
 
 .activeNav .active a {
-
   color: rgb(255, 255, 255);
   transition: 0.4s ease-in-out;
   text-decoration: none;
