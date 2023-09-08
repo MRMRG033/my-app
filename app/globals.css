@@ -5,7 +5,12 @@
 }
 
 html{
+
+  max-height: 100vh;
   scroll-behavior: smooth;
+}
+main{
+  max-height: 100vh;
 }
 
 html main{ 

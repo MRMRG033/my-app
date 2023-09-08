@@ -8,3 +8,8 @@ export interface Habilidades {
     InteresyHobbies: string[]
     MensajeVisitante: string[]
 }
+
+export interface WindowSize{
+    width: number
+    height:number
+}

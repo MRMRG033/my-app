@@ -4,26 +4,28 @@
   text-decoration: none;
 }
 
-.TopnavContainer {
+.TopnavContainerDisable{
+  display: none;
+}
+.hamburguesacss{
 
-  background-color: transparent;
-  position: fixed;
-  width: 100%;
+  display: none;
 }
 
-.TopnavContainer ul {
+.TopnavContainer ul #nav_dektop {
   width: 100%;
   list-style: none;
   padding: 10px 20px;
-  display: flex;
   justify-content: space-around;
 }
-
+#nav_smartphone{
+  display: none;
+}
 .activeNav .active a {
   color: rgb(255, 255, 255);
   transition: 0.4s ease-in-out;
   text-decoration: none;
-
+  
 }
 
 .inactiveNav li a {
@@ -31,5 +33,69 @@
 }
 
 .activeNav li a {
-  color: rgb(170, 170, 170);
+  color: #091C2F;
 }
+.TopnavContainer {
+  background-color: transparent;
+  position: fixed;
+}
+
+/*pantalla vertical*/
+@media screen and (min-width:320px) and (max-width: 480px) and (orientation: portrait) {
+  .TopnavContainer #nav_desktop{
+    display: none;
+  }
+  .TopnavContainer{
+    width: 100%;
+    display: block;
+    position: fixed;
+  }
+  /* class del boton del boton*/
+  .hamburguesacssButton{
+    background-color: transparent;
+    border: none;
+  }
+  .hamburguesacssButton:hover{
+    cursor: pointer;
+  }
+  #nav_smartphone{
+    position: sticky;
+    top: 0;
+    list-style: none;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+  }
+}
+@keyframes animacionHamburguesa{
+  0%{display: block;}
+}
+/* horizontal */
+@media screen and (min-width:320px) and (max-width: 480px) and (orientation: landscape) {}
+
+/* 481px — 768px: iPads, Tablets test width 624 */
+
+@media screen and (min-width:481px) and (max-width: 768px) and (orientation: portrait) {}
+
+@media screen and (min-width:481px) and (max-width: 768px) and (orientation: landscape) {}
+
+/* 769px — 1024px: Small screens, laptops test width  897 */
+
+@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: portrait) {}
+
+@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: landscape) {}
+
+/* 1025px — 1200px: Desktops, large screens test width  1113  */
+
+@media screen and (min-width:1025px) and (max-width: 1200px)and (orientation: portrait) {}
+
+@media screen and (min-width:1025px) and (max-width: 1200px)and (orientation: landscape) {}
+
+/* 1201px and more —  Extra large screens, TV  */
+
+/* 1201px and more —  Extra large screens, TV  */
+
+@media screen and (min-width:1202px) and (orientation: portrait) {}
+
+@media screen and (min-width:1202px) and (orientation: landscape) {}

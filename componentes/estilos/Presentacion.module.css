@@ -9,7 +9,20 @@
     color: #091C2F;
 }
 
+.PresentacionContainer h1{
+    font-size: 120px;
+}
 .PresentacionFoto{
     width: 20%;
     border-radius: 50% 50% 0% 50%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+    .PresentacionContainer h1{
+        font-size: 40PX;
+
+    }
+    .PresentacionFoto{
+        height: 300px;
+        width: 300px;
+    }
 }

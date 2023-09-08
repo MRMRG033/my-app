@@ -7,7 +7,7 @@ const Presentacion = ()=>{
         <section className={styles.PresentacionContainer}>
             <div>
                 <img className={styles.PresentacionFoto} src="foto.jpg" />
-            <h1 style={{fontSize:120}}>DESARROLLADOR WEB</h1>
+                <h1>DESARROLLADOR WEB</h1>
             </div>
         </section>
     )
