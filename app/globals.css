@@ -5,17 +5,21 @@
 }
 
 html{
-
+  max-width: 100vw;
+  background-color: black;
   max-height: 100vh;
   scroll-behavior: smooth;
 }
 main{
+  margin: 0px;
+  padding: 0px ;
   max-height: 100vh;
+  max-width: 100vw;
 }
 
 html main{ 
   background-color:#B9D6F2;
-  color: #091C2F;
+  color: gray;
 }
 div h2{
     color: #d1d5db;
@@ -26,6 +30,7 @@ div ul {
   font-size: 40px;
 }
 
-a{
-  color: black;
+section{
+  background-color: black;
+  height: 100vh;
 }

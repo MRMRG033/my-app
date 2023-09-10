@@ -1,18 +1,26 @@
 /* Establece los estilos iniciales para los enlaces */
-.TopnavContainer a {
+.TopnavContainer ul{
+  list-style: none;
   font-size: 24px;
   text-decoration: none;
 }
-
+.TopnavContainer {
+  background-color: #091C2F;
+  position: fixed;
+  width: 100%;
+}
+.TopnavContainer ul{
+  padding: 10px;
+  justify-content: space-around;
+  display: flex;
+  width: 80%;
+  margin: 0px auto;
+}
 .TopnavContainerDisable{
   display: none;
 }
-.hamburguesacss{
 
-  display: none;
-}
-
-.TopnavContainer ul #nav_dektop {
+.TopnavContainer ul #nav_desktop {
   width: 100%;
   list-style: none;
   padding: 10px 20px;
@@ -28,63 +36,244 @@
   
 }
 
-.inactiveNav li a {
-  color: rgb(0, 0, 0);
+.listItemActive{
+  color: white;
+  transition: .5s;
 }
-
-.activeNav li a {
-  color: #091C2F;
+.firstListItemActive{
+  transition: .5s;
+  color:white;
 }
-.TopnavContainer {
-  background-color: transparent;
-  position: fixed;
-}
-
 /*pantalla vertical*/
 @media screen and (min-width:320px) and (max-width: 480px) and (orientation: portrait) {
-  .TopnavContainer #nav_desktop{
+  #nav_desktop{
     display: none;
-  }
+}
   .TopnavContainer{
+
     width: 100%;
     display: block;
     position: fixed;
   }
-  /* class del boton del boton*/
-  .hamburguesacssButton{
-    background-color: transparent;
-    border: none;
-  }
-  .hamburguesacssButton:hover{
-    cursor: pointer;
-  }
+/*Nav Smartphone*/
+#nav_smartphone{
+  height: 50px;
+  z-index: 2;
+  position: sticky;
+  bottom: 0px;
+  list-style: none;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+}
+.item_nav_smartphone a{
+  opacity: 1;
+  text-align: center;
+}
+.item_nav_smartphone{
+
+  transition: .2s ease-in-out;
+}
+.item_nav_smartphone:hover{
+  transform: translateY(20px);
+}
+.listItemActiveSmartphone{
+  font-size: 45px;
+  transition: .2s;
+  color: black;
+}
+.TopnavContainer{
+  max-width: 100vw;
+  bottom: 0px;
+}
+}
+/* horizontal */
+@media screen and (min-width:320px) and (max-width: 480px) and (orientation: landscape) {
   #nav_smartphone{
+    height: 50px;
+    z-index: 2;
     position: sticky;
-    top: 0;
+    bottom: 0px;
     list-style: none;
     font-size: 40px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     background-color: white;
+    border-radius: 10px;
+  }
+  .item_nav_smartphone a{
+    opacity: 1;
+    text-align: center;
+  }
+  .item_nav_smartphone{
+
+    transition: .2s ease-in-out;
+  }
+  .item_nav_smartphone:hover{
+    transform: translateY(20px);
+  }
+  .listItemActiveSmartphone{
+    font-size: 45px;
+    transition: .2s;
+    color: black;
+  }
+  .TopnavContainer{
+    max-width: 100vw;
+    bottom: 0px;
   }
 }
-@keyframes animacionHamburguesa{
-  0%{display: block;}
-}
-/* horizontal */
-@media screen and (min-width:320px) and (max-width: 480px) and (orientation: landscape) {}
 
 /* 481px — 768px: iPads, Tablets test width 624 */
 
-@media screen and (min-width:481px) and (max-width: 768px) and (orientation: portrait) {}
+@media screen and (min-width:481px) and (max-width: 768px) and (orientation: portrait) {
+  #nav_smartphone{
+    height: 50px;
+    z-index: 2;
+    position: sticky;
+    bottom: 0px;
+    list-style: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .item_nav_smartphone a{
+    opacity: 1;
+    text-align: center;
+  }
+  .item_nav_smartphone{
 
-@media screen and (min-width:481px) and (max-width: 768px) and (orientation: landscape) {}
+    transition: .2s ease-in-out;
+  }
+  .item_nav_smartphone:hover{
+    transform: translateY(20px);
+  }
+  .listItemActiveSmartphone{
+    font-size: 45px;
+    transition: .2s;
+    color: black;
+  }
+  .TopnavContainer{
+    max-width: 100vw;
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width: 768px) and (orientation: landscape) {
+  #nav_smartphone{
+    height: 50px;
+    z-index: 2;
+    position: sticky;
+    bottom: 0px;
+    list-style: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .item_nav_smartphone a{
+    opacity: 1;
+    text-align: center;
+  }
+  .item_nav_smartphone{
+
+    transition: .2s ease-in-out;
+  }
+  .item_nav_smartphone:hover{
+    transform: translateY(20px);
+  }
+  .listItemActiveSmartphone{
+    font-size: 45px;
+    transition: .2s;
+    color: black;
+  }
+  .TopnavContainer{
+    max-width: 100vw;
+    bottom: 0px;
+  }
+}
 
 /* 769px — 1024px: Small screens, laptops test width  897 */
 
-@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: portrait) {}
+@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: portrait) {
+  #nav_smartphone{
+    height: 50px;
+    z-index: 2;
+    position: sticky;
+    bottom: 0px;
+    list-style: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .item_nav_smartphone a{
+    opacity: 1;
+    text-align: center;
+  }
+  .item_nav_smartphone{
 
-@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: landscape) {}
+    transition: .2s ease-in-out;
+  }
+  .item_nav_smartphone:hover{
+    transform: translateY(20px);
+  }
+  .listItemActiveSmartphone{
+    font-size: 45px;
+    transition: .2s;
+    color: black;
+  }
+  .TopnavContainer{
+    max-width: 100vw;
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width: 1024px)and (orientation: landscape) {
+  #nav_smartphone{
+    height: 50px;
+    z-index: 2;
+    position: sticky;
+    bottom: 0px;
+    list-style: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .item_nav_smartphone a{
+    opacity: 1;
+    text-align: center;
+  }
+  .item_nav_smartphone{
+
+    transition: .2s ease-in-out;
+  }
+  .item_nav_smartphone:hover{
+    transform: translateY(20px);
+  }
+  .listItemActiveSmartphone{
+    font-size: 45px;
+    transition: .2s;
+    color: black;
+  }
+  .TopnavContainer{
+    max-width: 100vw;
+    bottom: 0px;
+  }
+}
 
 /* 1025px — 1200px: Desktops, large screens test width  1113  */
 

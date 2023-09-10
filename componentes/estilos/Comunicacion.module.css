@@ -1,10 +1,7 @@
-.ComunicacionContainer{
-    height: 100vh;
-}
+
 .ComunicacionContainer h2{
     padding: 50px;
     font-size: 80px;
-    color: #B9D6F2;
     list-style: none;
     background-color: black;
 }

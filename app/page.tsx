@@ -2,7 +2,6 @@
 import React from 'react';
 import Basededatos from '@/componentes/Basededatos'
 import Comunicacion from '@/componentes/Comunicacion'
-import Disenoweb from '@/componentes/Disenoweb'
 import Frameworksbibliotecas from '@/componentes/Frameworks'
 import Habilidades from '@/componentes/Habilidades'
 import Intereshobby from '@/componentes/Intereshobby'
@@ -23,9 +22,8 @@ export default function Home() {
       <section id='Habilidades_container' style={{height:"100vh", display:'flex', flexDirection:"column", justifyContent:'space-around', background:'black' , scrollSnapType:'y mandatory'}}>
       <Habilidades />
       <Frameworksbibliotecas />
-      <Disenoweb />
-      </section>
       <Basededatos />
+      </section>
       <section id='Comunicaciones_container'>
       <Comunicacion />
       </section>

@@ -1,6 +1,7 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 import styles from './estilos/Topnav.module.css';
+import { Link } from 'react-scroll'
 //import {RxHamburgerMenu} from 'react-icons/rx'
 import {BiCodeAlt}from 'react-icons/bi'
 import {MdSchool} from 'react-icons/md'
@@ -8,41 +9,20 @@ import {FaHeadSideVirus} from 'react-icons/fa'
 import {HiHome} from 'react-icons/hi'
 const Navtop = () => {
 
-  const [activeSection, setActiveSection ] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      
-      const contenedores = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY;
-      contenedores.forEach((element) =>{
-        const sectionTop= element.offsetTop;
-        const sectionHeight = element.offsetHeight;
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          setActiveSection(element.id)
-        }
-    });
-}
-
-window.addEventListener('scroll', handleScroll);
-return ()=>{
-
-  window.removeEventListener('scroll', handleScroll);
-}
-  },[]);
 return(
   <nav className={styles.TopnavContainer}>
-      <ul className={activeSection === '' ? styles.inactiveNav : styles.activeNav} id={styles.nav_desktop}>
-          <li className={activeSection === '' ? styles.active : ''}><a href='#Presentacion_container'>Inicio</a></li>
-          <li className={activeSection === 'Experiencia_container' ? styles.active: ''}><a href='#Experiencia_container' >Experiencia</a></li>
-          <li className={activeSection === 'Habilidades_container' ? styles.active: ''}><a href='#Habilidades_container'>Habilidades</a></li>
-          <li className={activeSection === 'Comunicaciones_container' ? styles.active: ''}><a href='#Intereses_container'>Intereses</a></li>
+      <ul id={styles.nav_desktop}>
+          <li><Link to='Presentacion_container' activeClass={styles.firstListItemActive} smooth={true} spy={true} duration={500} >Inicio</Link></li>
+          <li><Link to='Experiencia_container' activeClass={styles.listItemActive} smooth={true} spy={true} duration={500} >Educacion</Link></li>
+          <li><Link to='Habilidades_container' activeClass={styles.listItemActive} smooth={true} spy={true} duration={500} >Habilidades</Link></li>
+          <li><Link to='Comunicaciones_container' activeClass={styles.listItemActive} smooth={true} spy={true} duration={500}  >Comunicaciones</Link></li>
+          <li><Link to='Intereses_container' activeClass={styles.listItemActive} smooth={true}  spy={true} duration={500} >Hobbies</Link></li>
       </ul>
       <ul id={styles.nav_smartphone}>
-          <li className='' ><a href='#Presentacion_container'><HiHome height="30px  " /></a></li>
-          <li ><a href='#Experiencia_container' ><MdSchool /></a></li>
-          <li ><a href='#Habilidades_container'><BiCodeAlt /></a></li>
-          <li ><a href='#Intereses_container'><FaHeadSideVirus /></a></li>
+          <li className={styles.item_nav_smartphone} ><Link to='Presentacion_container' smooth={true} spy={true} duration={500} activeClass={styles.listItemActiveSmartphone}  ><HiHome/></Link></li>
+          <li className={styles.item_nav_smartphone} ><Link to='Experiencia_container' smooth={true} spy={true} duration={500} activeClass={styles.listItemActiveSmartphone} ><MdSchool/></Link></li>
+          <li className={styles.item_nav_smartphone} ><Link to='Habilidades_container' smooth={true} spy={true} duration={500} activeClass={styles.listItemActiveSmartphone} ><BiCodeAlt/></Link></li>
+          <li className={styles.item_nav_smartphone} ><Link to='Intereses_container' smooth={true}  spy={true} duration={500}activeClass={styles.listItemActiveSmartphone} ><FaHeadSideVirus/></Link></li>
       </ul>
     </nav>
     )

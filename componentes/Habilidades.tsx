@@ -6,6 +6,8 @@ const Habilidades = () => {
         <h2>Habilidades tecnicas</h2>
         <ul>
             {habilidades?.map((item: string, index: number) => <li key={index}>{item}</li>)}
+            <li>HMTL5</li>
+            <li>CSS3</li>
         </ul>
     </div>
 }
